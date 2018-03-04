@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018. milnest.
+ */
+
 package com.milnest.test;
 
 import android.support.v7.app.AppCompatActivity;
