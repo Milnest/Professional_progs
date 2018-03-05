@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -12,13 +13,14 @@
         android:layout_weight="0.3">
 
         <TextView
+            android:id="@+id/resultField"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/resultField"
-            android:text=""
             android:gravity="center|end"
+            android:lines="1"
+            android:text=""
             android:textColor="#FFFFFF"
-            android:textSize="33sp"/>
+            android:textSize="33sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -29,22 +31,25 @@
         android:layout_weight="0.1">
 
         <TextView
+            android:id="@+id/inputField"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text=""
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:layout_weight="0.335"
             android:background="#222"
             android:gravity="center|end"
-            android:layout_weight="0.335"/>
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:lines="1"/>
 
         <Button
+            android:id="@+id/deleteButton"
+            style="@style/DeleteButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/delete"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            style="@style/DeleteButton"/>
+            android:onClick="onClick"
+            android:text="@string/delete" />
     </LinearLayout>
 
     <LinearLayout
@@ -61,35 +66,43 @@
             android:layout_marginBottom="5dp">
 
             <Button
+                android:id="@+id/sevenButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="7"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/seven" />
 
             <Button
+                android:id="@+id/eightButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="8"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton" />
+                android:onClick="onClick"
+                android:text="@string/eight" />
 
             <Button
+                android:id="@+id/nineButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="9"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/nine" />
 
             <Button
+                android:id="@+id/operationDivideButton"
+                style="@style/DarkGrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="÷"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/DarkGrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/operationDivide" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,35 +113,43 @@
             android:layout_marginBottom="5dp">
 
             <Button
+                android:id="@+id/fourButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="4"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/four" />
 
             <Button
+                android:id="@+id/fiveButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="5"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/five" />
 
             <Button
+                android:id="@+id/sixButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="6"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/six" />
 
             <Button
+                android:id="@+id/operationMultiplyButton"
+                style="@style/DarkGrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="×"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/DarkGrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/operationMultiply" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,35 +160,43 @@
             android:layout_marginBottom="5dp">
 
             <Button
+                android:id="@+id/oneButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="1"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/one" />
 
             <Button
+                android:id="@+id/twoButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="2"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/two" />
 
             <Button
+                android:id="@+id/threeButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="3"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/three" />
 
             <Button
+                android:id="@+id/operationMinusButton"
+                style="@style/DarkGrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="-"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/DarkGrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/operationMinus" />
         </LinearLayout>
 
         <LinearLayout
@@ -178,39 +207,46 @@
             android:layout_marginBottom="5dp">
 
             <Button
+                android:id="@+id/dotButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="."
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/dot" />
 
             <Button
+                android:id="@+id/zeroButton"
+                style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="0"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/GrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/zero" />
 
             <Button
+                android:id="@+id/operationCalculateButton"
+                style="@style/DarkGrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="="
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/DarkGrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/operationCalculate" />
 
             <Button
+                android:id="@+id/operationPlusButton"
+                style="@style/DarkGrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="+"
                 android:layout_marginStart="5dp"
                 android:layout_weight="0.25"
-                style="@style/DarkGrayButton"/>
+                android:onClick="onClick"
+                android:text="@string/operationPlus" />
         </LinearLayout>
 
     </LinearLayout>
-
 
 </LinearLayout>
 
