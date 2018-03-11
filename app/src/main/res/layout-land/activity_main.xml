@@ -1,185 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (c) 2018. milnest.
-  -->
-
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:alignmentMode="alignBounds"
-    android:columnCount="7"
-    android:rowCount="5"
-    android:orientation="horizontal"
-    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
     android:background="@color/colorBlack">
 
-    <TextView
-        android:id="@+id/resultField"
-        android:gravity="center|end"
-        android:layout_columnSpan="7"
-        android:lines="1"
-        android:text=""
-        android:textColor="@color/colorWhite"
-        android:textSize="33sp"
-        android:layout_gravity="fill"
-        android:layout_rowWeight="5"
-        android:layout_columnWeight="7"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.25">
 
-    <TextView
-        android:id="@+id/inputField"
-        android:background="@color/colorBlack"
-        android:gravity="center|end"
-        android:textColor="@color/colorWhite"
-        android:textSize="35sp"
-        android:lines="1"
-        android:layout_columnSpan="5"
-        android:layout_gravity="fill"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1" />
+        <TextView
+            android:id="@+id/resultField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="33sp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/deleteButton"
-        style="@style/DeleteButton"
-        android:onClick="onClick"
-        android:text="@string/delete"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0.15">
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill"
-        android:layout_rowWeight="1"
-        android:onClick="onClick"
-        android:text="@string/seven" />
+        <TextView
+            android:id="@+id/inputField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@color/colorBlack"
+            android:gravity="center|end"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            android:lines="1"/>
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/eight" />
+        <Button
+            android:id="@+id/deleteButton"
+            style="@style/DeleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.8"
+            android:onClick="onClick"
+            android:text="@string/delete" />
+    </LinearLayout>
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/nine" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.6">
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/operationDivide" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.33"
+            android:layout_marginBottom="5dp">
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnSpan="2"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/operationMultiply" />
+            <Button
+                android:id="@+id/sevenButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.167"
+                android:onClick="onClick"
+                android:text="@string/seven" />
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:onClick="onClick"
-        android:text="@string/four" />
+            <Button
+                android:id="@+id/eightButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.167"
+                android:onClick="onClick"
+                android:text="@string/eight" />
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/five" />
+            <Button
+                android:id="@+id/nineButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.167"
+                android:onClick="onClick"
+                android:text="@string/nine" />
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/six" />
+            <Button
+                android:id="@+id/operationDivideButton"
+                style="@style/DarkGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.167"
+                android:onClick="onClick"
+                android:text="@string/operationDivide" />
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/operationMinus" />
+            <Button
+                android:id="@+id/operationMultiplyButton"
+                style="@style/DarkGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.167"
+                android:onClick="onClick"
+                android:text="@string/operationMultiply" />
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/operationPlus" />
+        </LinearLayout>
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:onClick="onClick"
-        android:text="@string/one" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.33"
+            android:layout_marginBottom="5dp">
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/two" />
+            <Button
+                android:id="@+id/fourButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.20"
+                android:onClick="onClick"
+                android:text="@string/four" />
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/three" />
+            <Button
+                android:id="@+id/fiveButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.20"
+                android:onClick="onClick"
+                android:text="@string/five" />
 
-    <Button
-        style="@style/GrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/zero" />
+            <Button
+                android:id="@+id/sixButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.20"
+                android:onClick="onClick"
+                android:text="@string/six" />
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/dot" />
+            <Button
+                android:id="@+id/operationPlusButton"
+                style="@style/DarkGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.20"
+                android:onClick="onClick"
+                android:text="@string/operationPlus" />
 
-    <Button
-        style="@style/DarkGrayButton"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill"
-        android:onClick="onClick"
-        android:text="@string/operationCalculate" />
+            <Button
+                android:id="@+id/operationMinusButton"
+                style="@style/DarkGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.20"
+                android:onClick="onClick"
+                android:text="@string/operationMinus" />
 
-</GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.33"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/oneButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/twoButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/threeButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/zeroButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/dotButton"
+                style="@style/GrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/operationCalculateButton"
+                style="@style/DarkGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="@string/operationCalculate" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
 
